@@ -1,0 +1,55 @@
+@use '../../styles/variables.module' as *;
+@use '../../styles/mixins.module' as *;
+@include container;
+
+.detailsTitle {
+	font-weight: 700;
+	font-size: 40px;
+	line-height: 120%;
+	margin: 0 0 64px 0;
+
+	@media (max-width: 767px) {
+		font-size: 24px;
+		line-height: 133%;
+		margin-bottom: 40px;
+	}
+}
+
+.detailsList {
+	max-width: 800px;
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+}
+
+.name {
+	@media (max-width: 767px) {
+		font-size: 14px;
+		line-height: 143%;
+		color: $color-white-50;
+	}
+}
+
+.detailsItem {
+	display: flex;
+	justify-content: space-between;
+	gap: 8px;
+
+	& p {
+		margin: auto 0;
+	}
+
+	@media (max-width: 767px) {
+		flex-direction: column;
+	}
+}
+
+.line {
+	min-width: 100px;
+	border-bottom: 1px dashed $color-white-50;
+	flex-grow: 1;
+
+	@media (max-width: 767px) {
+		display: none;
+	}
+}

@@ -1,0 +1,58 @@
+@use '../../styles/variables.module' as *;
+
+button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	touch-action: manipulation;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-user-select: none;
+	user-select: none;
+	margin: 0;
+	max-width: 340px;
+	color: $color-white;
+	border: none;
+	outline: none;
+	padding: 16px 22px;
+	touch-action: manipulation;
+	user-select: none;
+
+	transition:
+		color ease-in-out 0.2s,
+		background-color ease-in-out 0.2s;
+}
+
+.btnModDefault {
+	background-color: $color-montana;
+	border-radius: 28px;
+	font-weight: 700;
+	align-self: stretch;
+
+	&:hover {
+		background-color: $color-dimgray;
+		color: $color-white-50;
+	}
+
+	&:focus-visible {
+		background-color: $color-dimgray;
+		color: $color-white-50;
+	}
+}
+
+.btnModBlue {
+	background-color: $color-blue;
+	border-radius: 28px;
+	font-weight: 700;
+	align-self: stretch;
+
+	&:hover {
+		background-color: $color-east-bay;
+		color: $color-white-50;
+	}
+
+	&:focus-visible {
+		background-color: $color-east-bay;
+		color: $color-white-50;
+	}
+}

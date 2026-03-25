@@ -1,0 +1,105 @@
+@use '../../styles/variables.module' as *;
+
+.item {
+	padding: 8px;
+
+	@media (max-width: 1023px) {
+		padding: 2px;
+	}
+}
+
+.linkItem {
+	display: flex;
+	padding: 20px 8px;
+	border-radius: 6px;
+	transition: outline-color ease-in 0.2s;
+	outline: 1px solid transparent;
+
+	&:hover {
+		outline-color: $color-white-50;
+	}
+
+	&:focus-visible {
+		outline-color: $color-white-50;
+	}
+
+	@media (max-width: 1023px) {
+		flex-direction: column;
+		padding: 0;
+		border-radius: 2px;
+		width: 220px;
+		min-height: 330px;
+
+		&:hover {
+			outline-color: $color-violet-1;
+		}
+
+		&:focus-visible {
+			outline-color: $color-violet-1;
+		}
+	}
+}
+
+.poster {
+	object-fit: cover;
+
+	@media (max-width: 1023px) {
+		width: 158px;
+		height: 206px;
+		margin-bottom: 16px;
+	}
+}
+
+.infoBlock {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 0 0 0 16px;
+}
+
+.info {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+
+	@media (max-width: 1023px) {
+		flex-wrap: wrap;
+	}
+}
+
+.rating {
+	font-weight: 700;
+	font-size: 12px;
+	line-height: 133%;
+	border-radius: 16px;
+	padding: 2px 8px;
+	display: flex;
+	gap: 5px;
+	align-items: center;
+}
+
+.rRed {
+	background-color: #c82020;
+}
+.rGrey {
+	background-color: #777777;
+}
+.rGreen {
+	background-color: #308e21;
+}
+.rGold {
+	background-color: #a59400;
+}
+
+.movieInf {
+	font-size: 14px;
+	line-height: 143%;
+	color: $color-white-70;
+}
+
+.titleMovie {
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 133%;
+	margin: 0;
+}

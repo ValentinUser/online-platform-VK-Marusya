@@ -1,0 +1,78 @@
+@use '../../styles/variables.module' as *;
+@use '../../styles/mixins.module' as *;
+@include container;
+
+.genre {
+	padding: 64px 0;
+
+	@media (max-width: 767px) {
+		padding: 0;
+	}
+}
+
+.titleGenre {
+	font-weight: 700;
+	font-size: 48px;
+	line-height: 117%;
+	margin: 0 0 64px 0;
+
+	@media (max-width: 767px) {
+		font-size: 24px;
+		line-height: 133%;
+		margin-bottom: 40px;
+	}
+}
+
+.genreList {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 64px 40px;
+
+	@media (max-width: 767px) {
+		gap: 24px;
+	}
+}
+
+.genreItem {
+	width: 290px;
+	height: auto;
+	border-radius: 24px;
+	overflow: hidden;
+	box-shadow: 0 0 80px 0 $color-white-33;
+	transition: all ease-in-out 0.5s;
+
+	@media (max-width: 767px) {
+		width: 335px;
+	}
+}
+
+.genreLink {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.genreLink:focus .linkName {
+	background-color: $color-purple;
+}
+
+.genreImg {
+	object-fit: cover;
+
+	@media (max-width: 767px) {
+		width: 100%;
+	}
+}
+
+.linkName {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 133%;
+	background-color: $color-black;
+	width: 100%;
+	height: 84px;
+}

@@ -1,0 +1,46 @@
+@use '../../styles/mixins.module' as *;
+@use '../../styles/variables.module' as *;
+@include container;
+
+footer {
+	width: 100%;
+	padding: 42px 0;
+}
+
+.list {
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	gap: 24px;
+
+	@media (max-width: 767px) {
+		justify-content: start;
+	}
+}
+
+.contactLink {
+	width: 36px;
+	height: 36px;
+	transition: color ease-in-out 0.2s;
+
+	&:hover {
+		color: $color-electric-purple;
+	}
+
+	&:focus-visible {
+		color: $color-electric-purple;
+	}
+
+	@media (max-width: 767px) {
+		width: 24px;
+		height: 24px;
+	}
+}
+
+.itemLink {
+	outline: none;
+
+	&:focus-visible {
+		color: $color-electric-purple;
+	}
+}

@@ -1,0 +1,79 @@
+@use '../../styles/variables.module' as *;
+@use '../../styles/mixins.module' as *;
+@include container;
+
+.userBlock {
+	padding: 40px 0;
+
+	@media (max-width: 767px) {
+		padding-top: 0;
+	}
+}
+
+.userSettingTitle {
+	font-weight: 700;
+	font-size: 48px;
+	line-height: 117%;
+	margin: 0 0 64px 0;
+
+	@media (max-width: 767px) {
+		margin-bottom: 40px;
+		font-size: 24px;
+		line-height: 133%;
+	}
+}
+
+.userList {
+	@media (max-width: 767px) {
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+.desktopText {
+	display: block;
+
+	@media (max-width: 767px) {
+		display: none;
+	}
+}
+
+.mobileText {
+	display: none;
+
+	@media (max-width: 767px) {
+		display: block;
+	}
+}
+
+.btnList {
+	display: flex;
+	align-items: center;
+	gap: 64px;
+
+	@media (max-width: 767px) {
+		gap: 24px;
+	}
+}
+
+.userSvg {
+	margin: 0 8px 0 0;
+}
+
+.btnItem {
+	font-size: 24px;
+	line-height: 133%;
+	background-color: initial;
+	outline: none;
+	padding: 0 0 6px 0;
+	border: 2px solid transparent;
+	transition: border-bottom ease-in-out 0.2s;
+
+	&:hover {
+		border-bottom: 2px solid$color-electric-purple;
+	}
+
+	&:focus-visible {
+		border-bottom: 2px solid $color-electric-purple;
+	}
+}

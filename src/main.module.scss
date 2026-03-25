@@ -1,0 +1,69 @@
+@use '~normalize.css' as *;
+@use 'styles/variables.module' as *;
+
+@font-face {
+	font-family: 'PlayRegular400';
+	src: url('./assets/fonts/Play-Regular.ttf');
+	font-display: swap;
+}
+@font-face {
+	font-family: 'PlayBold700';
+	src: url('./assets/fonts/Play-Bold.ttf');
+	font-display: swap;
+}
+@font-face {
+	font-family: 'OpenSansBold700';
+	src: url('./assets/fonts/OpenSans-Bold.ttf');
+	font-display: swap;
+}
+
+*,
+*::before *::after {
+	box-sizing: inherit;
+}
+
+input[type='text']::-ms-clear,
+input[type='text']::-ms-reveal {
+	display: none;
+	width: 0;
+	height: 0;
+}
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration {
+	display: none;
+}
+
+html {
+	overflow-y: scroll;
+}
+
+body {
+	font-family: 'PlayRegular400', sans-serif;
+	color: $color-white;
+	background:
+		linear-gradient(178.73deg, rgba(39, 135, 245, 0.18) -17.53%, rgba(163, 147, 245, 0.18) 131.74%),
+		linear-gradient(180deg, #000000 0%, rgba(39, 36, 36, 0.7) 100%);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+main {
+	flex-grow: 1;
+}
+
+img {
+	max-width: 100%;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}

@@ -1,0 +1,23 @@
+.favorites {
+	padding: 64px 0;
+
+	@media (max-width: 767px) {
+		padding: 40px 0;
+	}
+}
+
+.favoriteList {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 64px 40px;
+
+	@media (max-width: 767px) {
+		overflow-x: auto;
+		flex-wrap: nowrap;
+		gap: 40px;
+		padding: 50px 20px;
+		margin: -50px -20px;
+		scroll-snap-type: x mandatory;
+		scrollbar-width: none;
+	}
+}

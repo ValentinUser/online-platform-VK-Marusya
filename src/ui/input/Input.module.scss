@@ -1,0 +1,68 @@
+@use '../../styles/variables.module' as *;
+
+.inputBlock {
+	position: relative;
+	width: 100%;
+}
+
+.input {
+	box-sizing: border-box;
+	width: 100%;
+	border: 1px solid $color-black-40;
+	border-radius: 8px;
+	padding: 20px 16px 18px 52px;
+	outline: none;
+
+	&::placeholder {
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 133%;
+		color: $color-black-40;
+		transition: border-color ease-in-out 0.2s;
+	}
+
+	&:hover {
+		border-color: $color-violet-1;
+
+		& + .inputSvg {
+			color: $color-neon-blue;
+		}
+	}
+	&:focus-visible {
+		border-color: $color-violet-1;
+
+		& + .inputSvg {
+			color: $color-neon-blue;
+		}
+	}
+}
+
+.inputSvg {
+	position: absolute;
+	top: 17px;
+	left: 18px;
+	width: 24px;
+	height: 24px;
+	transition: color ease-in-out 0.2s;
+}
+
+.errorMod {
+	box-sizing: border-box;
+	width: 100%;
+	border: 1px solid $color-salmon;
+	border-radius: 8px;
+	padding: 20px 16px 18px 52px;
+	outline: none;
+
+	&::placeholder {
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 133%;
+		color: $color-black-40;
+		transition: border-color ease-in-out 0.2s;
+	}
+
+	& + .inputSvg {
+		color: $color-error;
+	}
+}

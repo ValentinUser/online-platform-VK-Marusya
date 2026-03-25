@@ -1,0 +1,22 @@
+@use '../../styles/mixins.module' as *;
+@include container;
+
+.loaderBox {
+	padding: 300px 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.loader {
+	width: 500px;
+	height: 40px;
+	border-radius: 15px;
+	background: linear-gradient(90deg, #0000, rgb(238, 104, 253)) left -50px top 0/50px 40px no-repeat #6ab0ff85;
+	animation: l2 1s infinite linear;
+}
+@keyframes l2 {
+	100% {
+		background-position: right -50px top 0;
+	}
+}

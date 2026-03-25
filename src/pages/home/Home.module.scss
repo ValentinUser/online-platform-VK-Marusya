@@ -1,0 +1,35 @@
+@use '../../styles/variables.module' as *;
+@use '../../styles/mixins.module' as *;
+@include container;
+
+.titleTop {
+	font-weight: 700;
+	font-size: 40px;
+	line-height: 120%;
+	color: $color-white;
+	margin: 0 0 64px 0;
+
+	@media (max-width: 767px) {
+		font-size: 24px;
+		line-height: 133%;
+		margin: 0 0 40px 0;
+	}
+}
+
+.filmBlock {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 64px 40px;
+	justify-content: center;
+
+	@media (max-width: 767px) {
+		overflow-x: auto;
+		scroll-snap-type: x mandatory;
+		scrollbar-width: none;
+		flex-wrap: nowrap;
+		justify-content: start;
+		gap: 40px;
+		padding: 85px 20px;
+		margin: -85px -20px;
+	}
+}
