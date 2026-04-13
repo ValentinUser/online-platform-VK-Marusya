@@ -1,6 +1,6 @@
 import { createContext, useState } from 'react'
 import { IMove } from '../../types/IMove'
-import { MyDataValueType } from '../../types/MyDataValueType'
+import { IMyDataValue } from '../../types/MyDataValueType'
 import { DataProviderProps } from '../../types/DataProviderProps'
 
 const initialState: IMove = {
@@ -23,7 +23,7 @@ const initialState: IMove = {
 	awardsSummary: null,
 }
 
-export const MyData = createContext<MyDataValueType | undefined>(undefined)
+export const MyData = createContext<IMyDataValue | undefined>(undefined)
 
 function DataProvider({ children }: DataProviderProps) {
 	const [dataMovie, setDataMovie] = useState(initialState)
