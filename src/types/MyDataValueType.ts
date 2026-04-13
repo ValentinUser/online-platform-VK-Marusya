@@ -1,7 +1,7 @@
 import { IMove } from './IMove'
 import { IProfileData } from './IProfileData'
 
-export interface MyDataValueType {
+export interface IMyDataValue {
 	dataMovie: IMove | null
 	setDataMovie: React.Dispatch<React.SetStateAction<IMove>>
 	fullListMovie: IMove[] | null
