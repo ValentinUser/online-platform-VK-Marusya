@@ -7,7 +7,7 @@ export interface IMove {
 	genres: string[]
 	plot: string
 	runtime: number
-	budget: string
+	budget: string | null
 	revenue: null | string
 	posterUrl: null | string
 	trailerUrl: null | string
